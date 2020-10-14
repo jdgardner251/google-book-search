@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import SearchArea from './SearchArea/SearchArea'
+import BookList from './BookList/BookList'
+
+// API KEY AIzaSyDr7mS_3MEoqOjiEbxVMsl1gCB48N2LrJU
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='App'>
+    <h1>Google Book Search</h1>
+      <SearchArea />
+      <BookList />
+    </main>
   );
 }
 
