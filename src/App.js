@@ -40,8 +40,23 @@ class App extends React.Component {
     if(search){
       const filter = bookType === "all" ? "" : `&filter=${bookType}`
       const url = `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyDr7mS_3MEoqOjiEbxVMsl1gCB48N2LrJU&printType=${printType}${filter}`
+      fetch(url)
+      .then(res => {
+        if(!res.ok) {
+          throw new Error('Something went wrong, please try again.')
+        }
+        return res;
+      })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          books: data.items
+        })
+      })
+      .catch(err => {
+        console.log('is is the log in the catch method')
+      })
     }
-
   };
 
   render() {
