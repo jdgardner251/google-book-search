@@ -8,6 +8,7 @@ class Book extends React.Component {
       <div className="book">
         <h2>{this.props.title}</h2>
         <h3>{this.props.author}</h3>
+        <p>{this.props.snippet}</p>
         <img src={this.props.image} alt='Pic of book cover'></img>
       </div>
     );

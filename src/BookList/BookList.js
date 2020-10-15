@@ -13,6 +13,7 @@ class BookList extends React.Component {
                 title={book.volumeInfo.title}
                 author={book.volumeInfo.authors[0]}
                 image={book.volumeInfo.imageLinks.smallThumbnail}
+                snippet={book.volumeInfo.description}
                 key={book.accessInfo.id}
             />
             )
