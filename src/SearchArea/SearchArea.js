@@ -9,8 +9,16 @@ class SearchArea extends React.Component {
     render() {
         return (
             <div className='searchArea'>
-                <Search />
-                <Filter />
+                <Search 
+                    searchInput={this.props.searchInput}
+                    search={this.props.search}
+                    handleSubmit={this.props.handleSubmit}
+                    
+                />
+                <Filter 
+                    selectPrintType={this.props.selectPrintType}
+                    selectBookType={this.props.selectBookType}
+                />
             </div>
             
         )
